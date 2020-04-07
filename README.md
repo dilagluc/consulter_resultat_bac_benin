@@ -1,4 +1,5 @@
-#Bac Bénin: Consulter son résultat rapidement
+# Bac Bénin 
+Consulter son résultat rapidement
 Simple script Python pour consulter son résultat de l'examen du baccalauréat-Bénin
 
 # Installation
