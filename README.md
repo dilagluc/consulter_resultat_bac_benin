@@ -5,7 +5,7 @@ Simple script Python pour consulter son résultat de l'examen du baccalauréat-B
 ```bash 
 git clone https://github.com/dilag-luc/consulter_resultat_bac_benin.git
 cd consulter_resultat_bac_benin
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 # Consulter mon résultat
