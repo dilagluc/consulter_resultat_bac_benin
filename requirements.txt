@@ -1,6 +1,5 @@
 beautifulsoup4
 wget
-urllib2
 ClientForm
 PIL
-
+urllib2
