@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 #
 # Desc: Obtenez les dernières statistiques du Bénin sur le coronavirus directement en ligne de commande
-# Author: https://twitter.com/dilag_luc
-                                                                  
+# Author: https://twitter.com/dilag_luc                                                                  
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 import urllib2
-import urllib
+import wget 
 from PIL import Image
 import ClientForm
 from bs4 import BeautifulSoup
@@ -34,7 +33,7 @@ re=raw_input("Année d'obtention : ")
 form["annee"]=[re]
 #request2= form.click()
 response2=urllib2.urlopen(form.click())
-document= urllib.urlopen(response2.geturl())
+document= urllib2.urlopen(response2.geturl())
 bs=BeautifulSoup(document.read(),"lxml")
 search=bs.find_all('font')
 
@@ -45,8 +44,7 @@ case = []
 for i in range(len(search)):
     hh=search[i].string
     case.append(hh)
-
-
+    
 sysout("\n")
 sysout(cli_colors.FAIL + 'Noms et prénoms\t: ' + '{}'.format(case[1]))
 sysout(cli_colors.WARNING + 'Numéro de table\t: ' + '{}'.format(case[2]))
@@ -57,6 +55,6 @@ sysout(cli_colors.ENDC + 'Lien\t\t: ' + '{}'.format(response2.geturl()))
 sysout("\nSource: www.officedubacbenin.bj ---- Date : {}".format(datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")))
 hh=bs.find_all('img')
 url="http://www.officedubacbenin.bj"+hh[1]['src']
-urllib.urlretrieve(url,"0001.jpg")
-img = Image.open('./0001.jpg')
+wget.download(url, 'c.jpg')
+img = Image.open('./c.jpg')
 img.show()
