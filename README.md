@@ -10,7 +10,7 @@ pip3 install -r requirements.txt
 
 # Consulter mon résultat
 ```bash
-python consult.py
+python resultat.py
 ```
 
 
