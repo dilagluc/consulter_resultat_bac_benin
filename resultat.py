@@ -49,11 +49,11 @@ for i in range(len(search)):
 
 
 sysout("\n")
-sysout(cli_colors.FAIL + 'Noms et prénoms\t: ' + '{}'.format(case[1]))
+sysout(cli_colors.OKBLUE + 'Noms et prénoms\t: ' + '{}'.format(case[1]))
 sysout(cli_colors.WARNING + 'Numéro de table\t: ' + '{}'.format(case[2]))
 sysout(cli_colors.OKGREEN + 'Série\t\t: ' + '{}'.format(case[3]))
 sysout(cli_colors.HEADER + 'Jury\t\t: ' + '{}'.format(case[4]))
-sysout(cli_colors.OKBLUE + 'Décision\t: ' + '{}'.format(case[5]))
+sysout(cli_colors.FAIL + 'Décision\t: ' + '{}'.format(case[5]))
 sysout(cli_colors.ENDC + 'Lien\t\t: ' + '{}'.format(response2.geturl()))
 sysout("\nSource: www.officedubacbenin.bj ---- Date : {}".format(datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")))
 hh=bs.find_all('img')
