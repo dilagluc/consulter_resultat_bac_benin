@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Desc: Obtenez les dernières statistiques du Bénin sur le coronavirus directement en ligne de commande
+# Desc: Obtenez votre résultat directement en ligne de commande
 # Author: https://twitter.com/dilag_luc
                                                                   
 import sys
