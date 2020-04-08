@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 #
 # Desc: Obtenez les dernières statistiques du Bénin sur le coronavirus directement en ligne de commande
-# Author: https://twitter.com/dilag_luc                                                                  
+# Author: https://twitter.com/dilag_luc
+                                                                  
 import sys
+import os
 reload(sys)
 sys.setdefaultencoding('utf8')
 import urllib2
@@ -44,7 +46,8 @@ case = []
 for i in range(len(search)):
     hh=search[i].string
     case.append(hh)
-    
+
+
 sysout("\n")
 sysout(cli_colors.FAIL + 'Noms et prénoms\t: ' + '{}'.format(case[1]))
 sysout(cli_colors.WARNING + 'Numéro de table\t: ' + '{}'.format(case[2]))
@@ -55,6 +58,11 @@ sysout(cli_colors.ENDC + 'Lien\t\t: ' + '{}'.format(response2.geturl()))
 sysout("\nSource: www.officedubacbenin.bj ---- Date : {}".format(datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")))
 hh=bs.find_all('img')
 url="http://www.officedubacbenin.bj"+hh[1]['src']
-wget.download(url, 'c.jpg')
-img = Image.open('./c.jpg')
+p=wget.download(url)
+
+img = Image.open(p)
 img.show()
+os.remove(p)
+
+
+#end
